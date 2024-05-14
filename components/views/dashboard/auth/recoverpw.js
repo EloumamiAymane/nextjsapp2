@@ -1,7 +1,8 @@
+"use client";
 import React from 'react'
-import {Row, Col, Button, Form, Container, Image} from 'react-bootstrap'
+import {Row, Col, Button, Form, Container} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom'
-
+import Image from "next/image";
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,10 +14,10 @@ import 'swiper/swiper-bundle.min.css'
 
 // img
 
-import login1 from '../../../assets/insea/insea-img1.jpg'
-import login2 from '../../../assets/insea/insea-img2.jpg'
-import login3 from '../../../assets/insea/insea-img3.jpeg'
-import insea from "../../../assets/images/insea.png";
+import login1 from '../../../../public/assets/insea/insea-img1.jpg'
+import login2 from '../../../../public/assets/insea/insea-img2.jpg'
+import login3 from '../../../../public/assets/insea/insea-img3.jpeg'
+import insea from "../../../../public/assets/images/insea.png";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);

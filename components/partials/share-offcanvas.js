@@ -1,13 +1,14 @@
+"use client";
 import React, {useState} from 'react'
 import { Offcanvas } from 'react-bootstrap'
 
 // img
-import icon8 from '../assets/images/icon/08.png'
-import icon9 from '../assets/images/icon/09.png'
-import icon10 from '../assets/images/icon/10.png'
-import icon11 from '../assets/images/icon/11.png'
-import icon12 from '../assets/images/icon/12.png'
-import icon13 from '../assets/images/icon/13.png'
+import icon8 from '../../public/assets/images/icon/08.png'
+import icon9 from '../../public/assets/images/icon/09.png'
+import icon10 from '../../public/assets/images/icon/10.png'
+import icon11 from '../../public/assets/images/icon/11.png'
+import icon12 from '../../public/assets/images/icon/12.png'
+import icon13 from '../../public/assets/images/icon/13.png'
 import { Link } from 'react-router-dom'
 
 

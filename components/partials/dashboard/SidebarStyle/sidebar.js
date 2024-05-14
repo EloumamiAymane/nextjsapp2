@@ -1,8 +1,6 @@
+"use client";
 import React,{useEffect} from 'react'
-// Import selectors & action from setting store
-import * as SettingSelector from '../../../../store/setting/selectors'
-
-// Redux Selector / Action
+import * as SettingSelector from '../../../store/setting/selectors'
 import { useSelector } from 'react-redux';
 
 //components

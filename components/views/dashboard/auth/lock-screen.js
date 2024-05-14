@@ -1,7 +1,8 @@
+"use client";
 import React from 'react'
-import {Row, Col, Container, Button, Form, Image} from 'react-bootstrap'
+import {Row, Col, Container, Button, Form} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom'
-
+import Image from "next/image";
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +13,11 @@ import 'swiper/swiper-bundle.min.css'
 // import 'swiper/components/navigation/navigation.scss';
 
 // img
-import logo from '../../../assets/images/logo-full.png'
-import login1 from '../../../assets/images/login/1.png'
-import login2 from '../../../assets/images/login/2.png'
-import login3 from '../../../assets/images/login/3.png'
-import user1 from '../../../assets/images/user/1.jpg'
+import logo from '../../../../public/assets/images/logo-full.png'
+import login1 from '../../../../public/assets/images/login/1.png'
+import login2 from '../../../../public/assets/images/login/2.png'
+import login3 from '../../../../public/assets/images/login/3.png'
+import user1 from '../../../../public/assets/images/user/1.jpg'
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);

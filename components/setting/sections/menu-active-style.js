@@ -1,3 +1,4 @@
+"use client";
 import {memo,Fragment}from 'react'
 import RadioBtn from '../elements/radio-btn'
 

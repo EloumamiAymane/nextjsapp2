@@ -1,13 +1,13 @@
 "use client";
 
 //scss
-import "./assets/scss/socialv.scss"
-import "./assets/scss/customizer.scss"
+import "../public/assets/scss/socialv.scss"
+import "../public/assets/scss/customizer.scss"
 // Redux Selector / Action
 import { useDispatch } from 'react-redux';
 
 // import state selectors
-import { setSetting } from '../components/store/setting/actions'
+import { setSetting } from './store/setting/actions'
 
 
 function App(props) {

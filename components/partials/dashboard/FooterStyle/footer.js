@@ -1,24 +1,28 @@
-import React from 'react'
+"use client";
+import React, {useEffect} from 'react'
 import { Link} from 'react-router-dom'
 import {Row, Col, Container} from 'react-bootstrap'
 
 const Footer = (props) => {
     const urlParams = new URLSearchParams(window.location.search);
     const mode = urlParams.get('dark');
-    if (mode !== null) {
-      document.body.classList=''
-    switch (mode) {
-        case "true":
-            document.body.classList='dark'
-        break;
-        case "false":
-             document.body.classList=''
-        break;
-        default:
-             document.body.classList=''
-            break;
-    }
-    }
+    useEffect(() => {
+        if (mode !== null) {
+            document.body.classList=''
+            switch (mode) {
+                case "true":
+                    document.body.classList='dark'
+                    break;
+                case "false":
+                    document.body.classList=''
+                    break;
+                default:
+                    document.body.classList=''
+                    break;
+            }
+        }
+    }, []);
+
     return (
             <>
                 <footer className="iq-footer bg-white">

@@ -2,45 +2,45 @@
 import React, {useState}  from 'react'
 import { Row, Col, Container, Dropdown, OverlayTrigger, Tooltip, Modal} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Card from '../../../components/Card'
-import CustomToggle from '../../../components/dropdowns'
-import ShareOffcanvas from '../../../components/share-offcanvas'
-
+import Card from '../../partials/Card'
+import CustomToggle from '../../partials/dropdowns'
+import ShareOffcanvas from '../../partials/share-offcanvas'
+import Image from "next/image"
 //image
-import user1 from '../../assets/images/user/1.jpg'
-import user01 from '../../assets/images/user/01.jpg'
-import user2 from '../../assets/images/user/02.jpg'
-import user3 from '../../assets/images/user/03.jpg'
-import user4 from '../../assets/images/user/04.jpg'
-import img1 from '../../assets/images/small/07.png'
-import img2 from '../../assets/images/small/08.png'
-import img3 from '../../assets/images/small/09.png'
-import img4 from '../../assets/images/small/10.png'
-import img5 from '../../assets/images/small/11.png'
-import img6 from '../../assets/images/small/12.png'
-import img7 from '../../assets/images/small/13.png'
-import img8 from '../../assets/images/small/14.png'
-import p1 from '../../assets/images/page-img/p1.jpg'
-import s1 from '../../assets/images/page-img/s1.jpg'
-import s2 from '../../assets/images/page-img/s2.jpg'
-import s3 from '../../assets/images/page-img/s3.jpg'
-import s4 from '../../assets/images/page-img/s4.jpg'
-import s5 from '../../assets/images/page-img/s5.jpg'
-import p2 from '../../assets/images/page-img/p2.jpg'
-import p3 from '../../assets/images/page-img/p3.jpg'
-import p4 from '../../assets/images/page-img/p4.jpg'
-import p5 from '../../assets/images/page-img/p5.jpg'
-import img42 from '../../assets/images/page-img/42.png'
-import icon1 from '../../assets/images/icon/01.png'
-import icon2 from '../../assets/images/icon/02.png'
-import icon3 from '../../assets/images/icon/03.png'
-import icon4 from '../../assets/images/icon/04.png'
-import icon5 from '../../assets/images/icon/05.png'
-import icon6 from '../../assets/images/icon/06.png'
-import icon7 from '../../assets/images/icon/07.png'
-import img9 from '../../assets/images/small/img-1.jpg'
-import img10 from '../../assets/images/small/img-2.jpg'
-import loader from '../../assets/images/page-img/page-load-loader.gif'
+import user1 from '../../../public/assets/images/user/01.jpg'
+import user01 from '../../../public/assets/images/user/01.jpg'
+import user2 from '../../../public/assets/images/user/02.jpg'
+import user3 from '../../../public/assets/images/user/03.jpg'
+import user4 from '../../../public/assets/images/user/04.jpg'
+import img1 from '../../../public/assets/images/small/07.png'
+import img2 from '../../../public/assets/images/small/08.png'
+import img3 from '../../../public/assets/images/small/09.png'
+import img4 from '../../../public/assets/images/small/10.png'
+import img5 from '../../../public/assets/images/small/11.png'
+import img6 from '../../../public/assets/images/small/12.png'
+import img7 from '../../../public/assets/images/small/13.png'
+import img8 from '../../../public/assets/images/small/14.png'
+import p1 from '../../../public/assets/images/page-img/p1.jpg'
+import s1 from '../../../public/assets/images/page-img/s1.jpg'
+import s2 from '../../../public/assets/images/page-img/s2.jpg'
+import s3 from '../../../public/assets/images/page-img/s3.jpg'
+import s4 from '../../../public/assets/images/page-img/s4.jpg'
+import s5 from '../../../public/assets/images/page-img/s5.jpg'
+import p2 from '../../../public/assets/images/page-img/p2.jpg'
+import p3 from '../../../public/assets/images/page-img/p3.jpg'
+import p4 from '../../../public/assets/images/page-img/p4.jpg'
+import p5 from '../../../public/assets/images/page-img/p5.jpg'
+import img42 from '../../../public/assets/images/page-img/42.png'
+import icon1 from '../../../public/assets/images/icon/01.png'
+import icon2 from '../../../public/assets/images/icon/02.png'
+import icon3 from '../../../public/assets/images/icon/03.png'
+import icon4 from '../../../public/assets/images/icon/04.png'
+import icon5 from '../../../public/assets/images/icon/05.png'
+import icon6 from '../../../public/assets/images/icon/06.png'
+import icon7 from '../../../public/assets/images/icon/07.png'
+import img9 from '../../../public/assets/images/small/img-1.jpg'
+import img10 from '../../../public/assets/images/small/img-2.jpg'
+import loader from '../../../public/assets/images/page-img/page-load-loader.gif'
 
 
 const Index = () => {
@@ -65,7 +65,7 @@ const Index = () => {
                                 <Card.Body >
                                     <div className="d-flex align-items-center">
                                         <div className="user-img">
-                                            <img src={user1} alt="user1" className="avatar-60 rounded-circle"/>
+                                            <Image src={user1} alt="user1" className="avatar-60 rounded-circle"/>
                                         </div>
                                         <form className="post-text ms-3 w-100 "   onClick={handleShow}>
                                             <input type="text" className="form-control rounded" placeholder="Write something here..." style={{border:"none"}}/>
@@ -75,17 +75,17 @@ const Index = () => {
                                     <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img1} alt="icon" className="img-fluid me-2"/> Photo/Video
+                                                <Image src={img1} alt="icon" className="img-fluid me-2"/> Photo/Video
                                             </Link>
                                         </li>
                                         <li className="me-3 mb-md-0 mb-2">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img2} alt="icon" className="img-fluid me-2"/> Tag Friend
+                                                <Image src={img2} alt="icon" className="img-fluid me-2"/> Tag Friend
                                             </Link>
                                         </li>
                                         <li className="me-3">
                                             <Link to="#" className="btn btn-soft-primary">
-                                                <img src={img3} alt="icon" className="img-fluid me-2"/> Feeling/Activity
+                                                <Image src={img3} alt="icon" className="img-fluid me-2"/> Feeling/Activity
                                             </Link>
                                         </li>
                                         <li>
@@ -100,15 +100,15 @@ const Index = () => {
                                                         <Dropdown.Menu>
                                                             <Dropdown.Item  onClick={handleShow}  href="#">Check in</Dropdown.Item>
                                                             <Dropdown.Item  onClick={handleShow}  href="#">Live Video</Dropdown.Item>
-                                                            <Dropdown.Item  onClick={handleShow}  href="#">Gif</Dropdown.Item> 
-                                                            <Dropdown.Item  onClick={handleShow}  href="#">Watch Party</Dropdown.Item> 
-                                                            <Dropdown.Item  onClick={handleShow}  href="#">Play with Friend</Dropdown.Item> 
+                                                            <Dropdown.Item  onClick={handleShow}  href="#">Gif</Dropdown.Item>
+                                                            <Dropdown.Item  onClick={handleShow}  href="#">Watch Party</Dropdown.Item>
+                                                            <Dropdown.Item  onClick={handleShow}  href="#">Play with Friend</Dropdown.Item>
                                                         </Dropdown.Menu>
                                                     </Dropdown>
                                                 </div>
                                             </button>
                                         </li>
-                                    </ul>   
+                                    </ul>
                                 </Card.Body>
                                 <Modal size="lg" className="fade" id="post-modal" onHide={handleClose} show={show} >
                                     <Modal.Header  className="d-flex justify-content-between">
@@ -120,7 +120,7 @@ const Index = () => {
                                     <Modal.Body>
                                         <div className="d-flex align-items-center">
                                             <div className="user-img">
-                                                <img src={user1} alt="user1" className="avatar-60 rounded-circle img-fluid"/>
+                                                <Image src={user1} alt="user1" className="avatar-60 rounded-circle img-fluid"/>
                                             </div>
                                             <form className="post-text ms-3 w-100 "  data-bs-toggle="modal" data-bs-target="#post-modal">
                                             <input type="text" className="form-control rounded" placeholder="Write something here..." style={{border:"none"}}/>
@@ -130,35 +130,35 @@ const Index = () => {
                                         <ul className="d-flex flex-wrap align-items-center list-inline m-0 p-0">
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img1} alt="icon" className="img-fluid"/> Photo/Video</div>
+                                                <Image src={img1} alt="icon" className="img-fluid"/> Photo/Video</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img2} alt="icon" className="img-fluid"/> Tag Friend</div>
+                                                <Image src={img2} alt="icon" className="img-fluid"/> Tag Friend</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img3} alt="icon" className="img-fluid"/> Feeling/Activity</div>
+                                                <Image src={img3} alt="icon" className="img-fluid"/> Feeling/Activity</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img4} alt="icon" className="img-fluid"/> Check in</div>
+                                                <Image src={img4} alt="icon" className="img-fluid"/> Check in</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img5} alt="icon" className="img-fluid"/> Live Video</div>
+                                                <Image src={img5} alt="icon" className="img-fluid"/> Live Video</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img6} alt="icon" className="img-fluid"/> Gif</div>
+                                                <Image src={img6} alt="icon" className="img-fluid"/> Gif</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img7} alt="icon" className="img-fluid"/> Watch Party</div>
+                                                <Image src={img7} alt="icon" className="img-fluid"/> Watch Party</div>
                                             </li>
                                             <li className="col-md-6 mb-3">
                                                 <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link>
-                                                <img src={img8} alt="icon" className="img-fluid"/> Play with Friends</div>
+                                                <Image src={img8} alt="icon" className="img-fluid"/> Play with Friends</div>
                                             </li>
                                         </ul>
                                         <hr/>
@@ -166,7 +166,7 @@ const Index = () => {
                                             <div className="d-flex align-items-center justify-content-between">
                                                 <div className="d-flex align-items-center">
                                                 <div className="user-img me-3">
-                                                    <img src={user1} alt="user1" className="avatar-60 rounded-circle img-fluid"/>
+                                                    <Image src={user1} alt="user1" className="avatar-60 rounded-circle img-fluid"/>
                                                 </div>
                                                 <h6>Your Story</h6>
                                                 </div>
@@ -193,7 +193,7 @@ const Index = () => {
                                                                     <p className="mb-0">Your Friend on facebook</p>
                                                                 </div>
                                                                 </div>
-                                                            </Dropdown.Item>        
+                                                            </Dropdown.Item>
                                                             <Dropdown.Item className=" p-3" to="#">
                                                                 <div className="d-flex align-items-top">
                                                                 <i className="ri-user-unfollow-line h4"></i>
@@ -228,7 +228,7 @@ const Index = () => {
                                     <div className="user-post-data">
                                         <div className="d-flex justify-content-between">
                                             <div className="me-3">
-                                                <img className="rounded-circle img-fluid" src={user01} alt=""/>
+                                                <Image className="rounded-circle img-fluid" src={user01} alt=""/>
                                             </div>
                                             <div className="w-100">
                                                 <div className="d-flex justify-content-between">
@@ -296,13 +296,13 @@ const Index = () => {
                                         <div className="user-post">
                                             <div className=" d-grid grid-rows-2 grid-flow-col gap-3">
                                                 <div className="row-span-2 row-span-md-1">
-                                                    <img src={p2} alt="post1" className="img-fluid rounded w-100"/>
+                                                    <Image src={p2} alt="post1" className="img-fluid rounded w-100"/>
                                                 </div>
                                                 <div className="row-span-1">
-                                                    <img src={p1} alt="post2" className="img-fluid rounded w-100"/>
+                                                    <Image src={p1} alt="post2" className="img-fluid rounded w-100"/>
                                                 </div>
                                                 <div className="row-span-1 ">
-                                                    <img src={p3} alt="post3" className="img-fluid rounded w-100"/>
+                                                    <Image src={p3} alt="post3" className="img-fluid rounded w-100"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -313,16 +313,16 @@ const Index = () => {
                                                         <div className="like-data">
                                                             <Dropdown>
                                                                 <Dropdown.Toggle  as={CustomToggle} >
-                                                                    <img src={icon1} className="img-fluid" alt=""/>
+                                                                    <Image src={icon1} className="img-fluid" alt=""/>
                                                                 </Dropdown.Toggle>
                                                                 <Dropdown.Menu className=" py-2">
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><img src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><img src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><img src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><img src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><img src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><img src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><img src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><Image src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><Image src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><Image src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><Image src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><Image src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><Image src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><Image src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
                                                                 </Dropdown.Menu>
                                                             </Dropdown>
                                                         </div>
@@ -367,7 +367,7 @@ const Index = () => {
                                             <li className="mb-2">
                                                 <div className="d-flex">
                                                     <div className="user-img">
-                                                        <img src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Monty Carlo</h6>
@@ -384,7 +384,7 @@ const Index = () => {
                                             <li>
                                                 <div className="d-flex">
                                                     <div className="user-img">
-                                                        <img src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Paul Molive</h6>
@@ -417,7 +417,7 @@ const Index = () => {
                                     <div className="user-post-data">
                                         <div className="d-flex justify-content-between">
                                             <div className="me-3">
-                                                <img className="rounded-circle img-fluid" src={user3} alt=""/>
+                                                <Image className="rounded-circle img-fluid" src={user3} alt=""/>
                                             </div>
                                             <div className="w-100">
                                                 <div className="d-flex  justify-content-between">
@@ -483,7 +483,7 @@ const Index = () => {
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus</p>
                                     </div>
                                     <div className="user-post">
-                                        <Link to="#"><img src={p4} alt="post1" className="img-fluid rounded w-100"/></Link>
+                                        <Link to="#"><Image src={p4} alt="post1" className="img-fluid rounded w-100"/></Link>
                                     </div>
                                     <div className="comment-area mt-3">
                                         <div className="d-flex justify-content-between align-items-center flex-wrap">
@@ -492,16 +492,16 @@ const Index = () => {
                                                     <div className="like-data">
                                                         <Dropdown>
                                                             <Dropdown.Toggle  as={CustomToggle} >
-                                                                <img src={icon1} className="img-fluid" alt=""/>
+                                                                <Image src={icon1} className="img-fluid" alt=""/>
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu className=" py-2">
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><img src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><img src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><img src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><img src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><img src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><img src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><img src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><Image src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><Image src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><Image src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><Image src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><Image src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><Image src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                    <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><Image src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
                                                             </Dropdown.Menu>
                                                         </Dropdown>
                                                     </div>
@@ -546,7 +546,7 @@ const Index = () => {
                                             <li className="mb-2">
                                                 <div className="d-flex ">
                                                     <div className="user-img">
-                                                        <img src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Monty Carlo</h6>
@@ -563,7 +563,7 @@ const Index = () => {
                                             <li>
                                                 <div className="d-flex ">
                                                     <div className="user-img">
-                                                        <img src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Paul Molive</h6>
@@ -586,7 +586,7 @@ const Index = () => {
                                                 <Link to="#"><i className="ri-camera-line me-3"></i></Link>
                                             </div>
                                         </form>
-                                    </div>    
+                                    </div>
                                 </div>
                             </div>
                         </Col>
@@ -596,7 +596,7 @@ const Index = () => {
                                     <div className="user-post-data">
                                         <div className="d-flex justify-content-between">
                                             <div className="me-3">
-                                                <img className="rounded-circle img-fluid" src={user4} alt=""/>
+                                                <Image className="rounded-circle img-fluid" src={user4} alt=""/>
                                             </div>
                                             <div className="w-100">
                                                 <div className=" d-flex  justify-content-between">
@@ -668,16 +668,16 @@ const Index = () => {
                                                     <div className="like-data">
                                                         <Dropdown>
                                                             <Dropdown.Toggle  as={CustomToggle} >
-                                                                <img src={icon1} className="img-fluid" alt=""/>
+                                                                <Image src={icon1} className="img-fluid" alt=""/>
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu className=" py-2">
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><img src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><img src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><img src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><img src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><img src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><img src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><img src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><Image src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><Image src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><Image src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><Image src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><Image src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><Image src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><Image src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
                                                             </Dropdown.Menu>
                                                         </Dropdown>
                                                     </div>
@@ -722,7 +722,7 @@ const Index = () => {
                                             <li className="mb-2">
                                                 <div className="d-flex">
                                                     <div className="user-img">
-                                                        <img src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Monty Carlo</h6>
@@ -739,7 +739,7 @@ const Index = () => {
                                             <li>
                                                 <div className="d-flex ">
                                                     <div className="user-img">
-                                                        <img src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Paul Molive</h6>
@@ -772,7 +772,7 @@ const Index = () => {
                                     <div className="post-item">
                                         <div className="d-flex justify-content-between">
                                             <div className="me-3">
-                                                <img className="rounded-circle img-fluid avatar-60" src={user1} alt=""/>
+                                                <Image className="rounded-circle img-fluid avatar-60" src={user1} alt=""/>
                                             </div>
                                             <div className="w-100">
                                                 <div className="d-flex justify-content-between">
@@ -835,7 +835,7 @@ const Index = () => {
                                     </div>
                                 </div>
                                 <div className="user-post text-center">
-                                    <Link to="#"><img src={p5} alt="post1" className="img-fluid rounded w-100 mt-3"/></Link>
+                                    <Link to="#"><Image src={p5} alt="post1" className="img-fluid rounded w-100 mt-3"/></Link>
                                 </div>
                                 <div className="comment-area mt-3">
                                     <div className="d-flex justify-content-between align-items-center flex-wrap">
@@ -844,16 +844,16 @@ const Index = () => {
                                                 <div className="like-data">
                                                     <Dropdown>
                                                         <Dropdown.Toggle  as={CustomToggle} >
-                                                            <img src={icon1} className="img-fluid" alt=""/>
+                                                            <Image src={icon1} className="img-fluid" alt=""/>
                                                         </Dropdown.Toggle>
                                                         <Dropdown.Menu className=" py-2">
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><img src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><img src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><img src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><img src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><img src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><img src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><img src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><Image src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><Image src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><Image src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><Image src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><Image src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><Image src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                            <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><Image src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
                                                         </Dropdown.Menu>
                                                     </Dropdown>
                                                 </div>
@@ -898,7 +898,7 @@ const Index = () => {
                                         <li className="mb-2">
                                             <div className="d-flex">
                                                 <div className="user-img">
-                                                    <img src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                    <Image src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                 </div>
                                                 <div className="comment-data-block ms-3">
                                                     <h6>Monty Carlo</h6>
@@ -915,7 +915,7 @@ const Index = () => {
                                         <li>
                                             <div className="d-flex">
                                                 <div className="user-img">
-                                                    <img src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                    <Image src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                 </div>
                                                 <div className="comment-data-block ms-3">
                                                     <h6>Paul Molive</h6>
@@ -948,7 +948,7 @@ const Index = () => {
                                     <div className="user-post-data">
                                         <div className="d-flex justify-content-between">
                                             <div className="me-3">
-                                                <img className="rounded-circle img-fluid" src={user2} alt=""/>
+                                                <Image className="rounded-circle img-fluid" src={user2} alt=""/>
                                             </div>
                                             <div className="w-100">
                                                 <div className="d-flex justify-content-between">
@@ -1025,16 +1025,16 @@ const Index = () => {
                                                     <div className="like-data">
                                                         <Dropdown>
                                                             <Dropdown.Toggle as={CustomToggle}  id="post-option" >
-                                                                <img src={icon1} className="img-fluid" alt=""/>
+                                                                <Image src={icon1} className="img-fluid" alt=""/>
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu className=" py-2">
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><img src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><img src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><img src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><img src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><img src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><img src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
-                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><img src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Like</Tooltip>} className="ms-2 me-2" ><Image src={icon1} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Love</Tooltip>} className="me-2" ><Image src={icon2} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Happy</Tooltip>} className="me-2" ><Image src={icon3} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>HaHa</Tooltip>} className="me-2" ><Image src={icon4} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Think</Tooltip>} className="me-2" ><Image src={icon5} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Sade</Tooltip>} className="me-2" ><Image src={icon6} className="img-fluid me-2" alt=""/></OverlayTrigger>
+                                                                <OverlayTrigger placement="top" overlay={<Tooltip>Lovely</Tooltip>} className="me-2" ><Image src={icon7} className="img-fluid me-2" alt=""/></OverlayTrigger>
                                                             </Dropdown.Menu>
                                                         </Dropdown>
                                                     </div>
@@ -1079,7 +1079,7 @@ const Index = () => {
                                             <li className="mb-2">
                                                 <div className="d-flex flex-wrap">
                                                     <div className="user-img">
-                                                        <img src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user2} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Monty Carlo</h6>
@@ -1096,7 +1096,7 @@ const Index = () => {
                                             <li>
                                                 <div className="d-flex flex-wrap">
                                                     <div className="user-img">
-                                                        <img src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
+                                                        <Image src={user3} alt="user1" className="avatar-35 rounded-circle img-fluid"/>
                                                     </div>
                                                     <div className="comment-data-block ms-3">
                                                         <h6>Paul Molive</h6>
@@ -1141,21 +1141,21 @@ const Index = () => {
                                         </div>
                                     </li>
                                     <li className="d-flex mb-3 align-items-center active">
-                                        <img src={s2} alt="story-img" className="rounded-circle img-fluid"/>
+                                        <Image src={s2} alt="story-img" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Anna Mull</h5>
                                             <p className="mb-0">1 hour ago</p>
                                         </div>
                                     </li>
                                     <li className="d-flex mb-3 align-items-center">
-                                        <img src={s3} alt="story-img" className="rounded-circle img-fluid"/>
+                                        <Image src={s3} alt="story-img" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Ira Membrit</h5>
                                             <p className="mb-0">4 hour ago</p>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
-                                        <img src={s1} alt="story-img" className="rounded-circle img-fluid"/>
+                                        <Image src={s1} alt="story-img" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Bob Frapples</h5>
                                             <p className="mb-0">9 hour ago</p>
@@ -1188,14 +1188,14 @@ const Index = () => {
                             <Card.Body>
                                 <ul className="media-story list-inline m-0 p-0">
                                     <li className="d-flex mb-4 align-items-center ">
-                                        <img src={s4} alt="story1" className="rounded-circle img-fluid"/>
+                                        <Image src={s4} alt="story1" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Web Workshop</h5>
                                             <p className="mb-0">1 hour ago</p>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
-                                        <img src={s5} alt="story2" className="rounded-circle img-fluid"/>
+                                        <Image src={s5} alt="story2" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Fun Events and Festivals</h5>
                                             <p className="mb-0">1 hour ago</p>
@@ -1213,14 +1213,14 @@ const Index = () => {
                             <Card.Body>
                                 <ul className="media-story list-inline m-0 p-0">
                                     <li className="d-flex mb-4 align-items-center">
-                                        <img src={user01} alt="story3" className="rounded-circle img-fluid"/>
+                                        <Image src={user01} alt="story3" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Anna Sthesia</h5>
                                             <p className="mb-0">Today</p>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
-                                        <img src={user2} alt="story-img" className="rounded-circle img-fluid"/>
+                                        <Image src={user2} alt="story-img" className="rounded-circle img-fluid"/>
                                         <div className="stories-data ms-3">
                                             <h5>Paul Molive</h5>
                                             <p className="mb-0">Tomorrow</p>
@@ -1253,35 +1253,35 @@ const Index = () => {
                                 <ul className="suggested-page-story m-0 p-0 list-inline">
                                     <li className="mb-3">
                                         <div className="d-flex align-items-center mb-3">
-                                            <img src={img42} alt="story-img" className="rounded-circle img-fluid avatar-50"/>
+                                            <Image src={img42} alt="story-img" className="rounded-circle img-fluid avatar-50"/>
                                             <div className="stories-data ms-3">
                                             <h5>Iqonic Studio</h5>
                                             <p className="mb-0">Lorem Ipsum</p>
                                             </div>
                                         </div>
-                                        <img src={img9} className="img-fluid rounded" alt="Responsive"/>
+                                        <Image src={img9} className="img-fluid rounded" alt="Responsive"/>
                                         <div className="mt-3"><Link to="#" className="btn d-block"><i className="ri-thumb-up-line me-2"></i> Like Page</Link></div>
                                     </li>
                                     <li>
                                         <div className="d-flex align-items-center mb-3">
-                                            <img src={img42} alt="story-img" className="rounded-circle img-fluid avatar-50"/>
+                                            <Image src={img42} alt="story-img" className="rounded-circle img-fluid avatar-50"/>
                                             <div className="stories-data ms-3">
                                             <h5>Cakes & Bakes </h5>
                                             <p className="mb-0">Lorem Ipsum</p>
                                             </div>
                                         </div>
-                                        <img src={img10} className="img-fluid rounded" alt="Responsive"/>
+                                        <Image src={img10} className="img-fluid rounded" alt="Responsive"/>
                                         <div className="mt-3"><Link to="#" className="btn d-block"><i className="ri-thumb-up-line me-2"></i> Like Page</Link></div>
                                     </li>
                                 </ul>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <div className="col-sm-12 text-center">
-                        <img src={loader} alt="loader" style={{height: "100px"}}/>
-                    </div>
+                    {/*<div className="col-sm-12 text-center">*/}
+                    {/*    <Image src={loader} alt="loader" style={{height: "50px"}}/>*/}
+                    {/*</div>*/}
                 </Row>
-            </Container>                
+            </Container>
             </div>
         </>
     )

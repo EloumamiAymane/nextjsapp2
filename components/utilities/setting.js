@@ -1,3 +1,4 @@
+"use client"
 import _ from 'lodash'
 import { getColorShadeTint } from './colors'
 import { getRootVars, setRootVariables, setFontFamily } from './root-var'
@@ -77,14 +78,14 @@ export const updateStorage = (storage,key,value) => {
         switch (storage) {
             case 'localStorage':
                 sessionStorage.removeItem(key)
-                localStorage.setItem(key, JSON.stringify(value))       
+                localStorage.setItem(key, JSON.stringify(value))
                 break;
 
             case 'sessionStorage':
                 localStorage.removeItem(key)
                 sessionStorage.setItem(key, JSON.stringify(value))
                 break;
-        
+
             default:
                 localStorage.removeItem(key)
                 sessionStorage.removeItem(key)
@@ -97,7 +98,7 @@ export const updateStorage = (storage,key,value) => {
 
 export const getStorage = (key) => {
     if(localStorage.getItem(key) === 'none' || sessionStorage.getItem(key) === 'none') return 'none'
-    if((localStorage.getItem(key) !== null && localStorage.getItem(key) !== '' ) || 
+    if((localStorage.getItem(key) !== null && localStorage.getItem(key) !== '' ) ||
     (sessionStorage.getItem(key) !== null && sessionStorage.getItem(key) !== '')) {
         let value = localStorage.getItem(key)
         if(value === null) value = sessionStorage.getItem(key)

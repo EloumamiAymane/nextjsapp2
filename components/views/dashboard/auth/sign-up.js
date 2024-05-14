@@ -1,8 +1,9 @@
-import React from 'react'
-import {Row,Col,Container,Form,Button,Image} from 'react-bootstrap'
+"use client";
+import React, {useEffect} from 'react'
+import {Row,Col,Container,Form,Button} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom'
-
-
+import Image from "next/image";
+import Scrollbar from 'smooth-scrollbar'
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay } from 'swiper';
@@ -12,16 +13,19 @@ import 'swiper/swiper-bundle.min.css'
 // import 'swiper/components/navigation/navigation.scss';
 
 //img
-import login1 from '../../../assets/insea/insea-img1.jpg'
-import login2 from '../../../assets/insea/insea-img2.jpg'
-import login3 from '../../../assets/insea/insea-img3.jpeg'
-import insea from "../../../assets/images/insea.png";
+import login1 from '../../../../public/assets/insea/insea-img1.jpg'
+import login2 from '../../../../public/assets/insea/insea-img2.jpg'
+import login3 from '../../../../public/assets/insea/insea-img3.jpeg'
+import insea from "../../../../public/assets/images/insea.png";
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay]);
 
 const SignUp = () => {
    let history =useNavigate()
+   useEffect(() => {
+          Scrollbar.init(document.querySelector('#register'))
+       },[])
    return (
       <>
          <section className="sign-in-page "style={{ maxHeight: '1200px', overflowY: 'auto' }}>
@@ -82,7 +86,7 @@ const SignUp = () => {
                      </div>
                   </Col>
                   <Col md={7} className="bg-white pt-5 pb-lg-0 pb-5 mt-5 rounded-5 mx-auto">
-                     <div className="sign-in-from ">
+                     <div className="sign-in-from " id="register">
                         <h1 className="mb-0">Sign Up</h1>
                         <Form>
                            <Row className="mb-3">

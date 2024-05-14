@@ -1,7 +1,8 @@
+"use client";
 import React from 'react'
-import {Row, Col, Container, Form, Button, Image} from 'react-bootstrap'
+import {Row, Col, Container, Form, Button} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom'
-
+import Image from "next/image";
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +13,11 @@ import 'swiper/swiper-bundle.min.css'
 // import 'swiper/components/navigation/navigation.scss';
 
 //img
-import logo from '../../../assets/images/logo-full.png'
-import login1 from '../../../assets/insea/insea-img1.jpg'
-import login2 from '../../../assets/insea/insea-img2.jpg'
-import login3 from '../../../assets/insea/insea-img3.jpeg'
-import insea from "../../../assets/images/insea.png"
+
+import login1 from '../../../../public/assets/insea/insea-img1.jpg'
+import login2 from '../../../../public/assets/insea/insea-img2.jpg'
+import login3 from '../../../../public/assets/insea/insea-img3.jpeg'
+import insea from "../../../../public/assets/images/insea.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 

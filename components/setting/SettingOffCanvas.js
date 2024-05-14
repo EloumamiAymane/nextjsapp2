@@ -7,7 +7,7 @@ import { Offcanvas, Row, Col} from 'react-bootstrap'
 import { useSelector } from 'react-redux';
 
 // Import selectors & action from setting store
-import * as SettingSelector from '../../store/setting/selectors'
+import * as SettingSelector from '../store/setting/selectors'
 
 // Section Components
 // Style Setting Section Components

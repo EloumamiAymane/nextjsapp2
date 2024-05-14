@@ -1,6 +1,7 @@
+"use client";
 import {memo} from 'react'
 import { useDispatch } from 'react-redux'
-import SettingAction from '../../../store/setting/actions'
+import SettingAction from '../../store/setting/actions'
 
 const RadioBtn = memo((props) => {
     const dispatch = useDispatch();

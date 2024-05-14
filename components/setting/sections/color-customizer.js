@@ -1,3 +1,4 @@
+"use client";
 import {memo, Fragment} from 'react'
 
 import _ from 'lodash'
@@ -7,7 +8,7 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 
 
 import { useDispatch } from 'react-redux'
-import { theme_color } from '../../../store/setting/actions'
+import { theme_color } from '../../store/setting/actions'
 
 // Images
 

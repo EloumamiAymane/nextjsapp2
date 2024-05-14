@@ -1,3 +1,4 @@
+"use client";
 import {memo,Fragment}from 'react'
 import CheckboxBtn from '../elements/checkbox-btn'
 

@@ -1,40 +1,41 @@
-import React, { useState } from "react";
+"use client";
+import React, {useEffect, useState} from "react";
 import {
   Dropdown,
   Nav,
   Form,
   Card,
   Container,
-  Image,
   Modal,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import Image from "next/image"
 //image
-import user1 from "../../../../assets/images/user/1.jpg";
-import user2 from "../../../../assets/images/user/02.jpg";
-import user3 from "../../../../assets/images/user/03.jpg";
-import user4 from "../../../../assets/images/user/04.jpg";
-import user5 from "../../../../assets/images/user/05.jpg";
-import user6 from "../../../../assets/images/page-img/19.jpg";
-import user7 from "../../../../assets/images/page-img/18.jpg";
-import user8 from "../../../../assets/images/page-img/20.jpg";
-import user9 from "../../../../assets/images/page-img/21.jpg";
-import user10 from "../../../../assets/images/page-img/22.jpg";
-import user11 from "../../../../assets/images/page-img/23.jpg";
-import user12 from "../../../../assets/images/page-img/24.jpg";
-import user13 from "../../../../assets/images/page-img/09.jpg";
-import user14 from "../../../../assets/images/page-img/03.jpg";
-import user15 from "../../../../assets/images/page-img/02.jpg";
-import user16 from "../../../../assets/images/page-img/01.jpg";
+import user1 from "../../../../public/assets/images/user/01.jpg";
+import user2 from "../../../../public/assets/images/user/02.jpg";
+import user3 from "../../../../public/assets/images/user/03.jpg";
+import user4 from "../../../../public/assets/images/user/04.jpg";
+import user5 from "../../../../public/assets/images/user/05.jpg";
+import user6 from "../../../../public/assets/images/page-img/19.jpg";
+import user7 from "../../../../public/assets/images/page-img/18.jpg";
+import user8 from "../../../../public/assets/images/page-img/20.jpg";
+import user9 from "../../../../public/assets/images/page-img/21.jpg";
+import user10 from "../../../../public/assets/images/page-img/22.jpg";
+import user11 from "../../../../public/assets/images/page-img/23.jpg";
+import user12 from "../../../../public/assets/images/page-img/24.jpg";
+import user13 from "../../../../public/assets/images/page-img/09.jpg";
+import user14 from "../../../../public/assets/images/page-img/03.jpg";
+import user15 from "../../../../public/assets/images/page-img/02.jpg";
+import user16 from "../../../../public/assets/images/page-img/01.jpg";
 //Componets
-import CustomToggle from "../../../dropdowns";
-// import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
-
+import CustomToggle from "../../dropdowns"
 const Header = () => {
-  const minisidebar = () => {
-    document.getElementsByTagName("ASIDE")[0].classList.toggle("sidebar-mini");
-  };
+  let minisidebar;
+ useEffect(()=>{
+    minisidebar = () => {
+     document.getElementsByTagName("ASIDE")[0].classList.toggle("sidebar-mini");
+   };
+ },[])
 
   const [show, setShow] = useState(false);
 
@@ -50,7 +51,7 @@ const Header = () => {
         >
           <Container fluid className="navbar-inner">
             <div className="d-flex align-items-center gap-3  pb-2 pb-lg-0">
-             
+
               <Link
                 to="/"
                 className="d-flex align-items-center gap-2 iq-header-logo"
@@ -545,7 +546,7 @@ const Header = () => {
                 id="post-modal"
               >
                 <div className="modal-dialog modal-fullscreen-lg-down m-0">
-                  
+
                   <Modal.Header className="py-2">
                     <div className="d-flex align-items-center justify-content-between d-lg-none w-100">
                       <form

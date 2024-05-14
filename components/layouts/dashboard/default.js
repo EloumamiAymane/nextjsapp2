@@ -1,18 +1,18 @@
+"use client";
 import React from 'react'
-
 //header
-import Header from ''
+import Header from '../../partials/dashboard/HeaderStyle/header'
 
 //sidebar
-import RightSidebar from '../../../components/partials/dashboard/SidebarStyle/rightsidebar'
+import RightSidebar from '../../partials/dashboard/SidebarStyle/rightsidebar'
 
 //sidebar
-import Sidebar from '../../../components/partials/dashboard/SidebarStyle/sidebar'
+import Sidebar from '../../partials/dashboard/SidebarStyle/sidebar'
 
 //footer
-import Footer from '../../../components/partials/dashboard/FooterStyle/footer'
+import Footer from '../../partials/dashboard/FooterStyle/footer'
 
-import SettingOffCanvas from '../../../components/setting/SettingOffCanvas'
+import SettingOffCanvas from '../../setting/SettingOffCanvas'
 import { Outlet } from 'react-router-dom'
 
 const Default = () => {

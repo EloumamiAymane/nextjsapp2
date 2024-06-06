@@ -2,6 +2,7 @@
 	color: $white;
 	padding: 6.25rem;
 	height: 100vh;
+	margin-left: 100px;
 }
 .sign-in-page {
 	height: 100vh;
@@ -181,53 +182,68 @@
     0% { transform: scale(1.0); }
     100% { transform: scale(1.1); }
 }
-.custom-col-height{
-	height: 550px;
-	position: relative;
-	top:90px
-
-}
-.custom-col-recpw{
-	height: 320px;
-	position: relative;
-	top:260px
-}
+//.custom-col-height{
+//	height: 550px;
+//	position: relative;
+//	top:90px
+//
+//}
+//.custom-col-recpw{
+//	height: 320px;
+//	position: relative;
+//	top:260px
+//}
 .swipper{
-	width: 450px;
+	width: 300px;
 	position: relative;
-	right: 250px;
-}
-
-.custom-col-conf{
-	height: 380px;
-	position: relative;
-	top:250px
-}
-
-@media (max-width: 752px) {
-	.custom-col-height {
-		height: 100%; /* Adjust the height for smaller screens */
-		position: relative;
-		bottom: 200px;
-
-	}
-
-	.custom-col-recpw{
-		height: 100%;
-		position: relative;
-		bottom: 800px;
-	}
-	.custom-col-conf{
-        height: 100%;
-		position: relative;
-		bottom: 500px;
-	}
+	right: 200px;
 
 }
-@media (max-width: 1120px) {
+//
+//.custom-col-conf{
+//	height: 380px;
+//	position: relative;
+//	top:250px
+//}
+//
+//@media (max-width: 752px) {
+//	.custom-col-height {
+//		height: 100%; /* Adjust the height for smaller screens */
+//		position: relative;
+//		bottom: 200px;
+//
+//	}
+//
+//	.custom-col-recpw{
+//		height: 100%;
+//		position: relative;
+//		bottom: 800px;
+//	}
+//	.custom-col-conf{
+//        height: 100%;
+//		position: relative;
+//		bottom: 500px;
+//	}
+//
+//}
+@media (max-width: 1312px) {
 	.swipper{
-		width: 100%;
+		width: 250px;
+		position: relative;
+		right: 100px;
+	} }
+@media (max-width: 983px) {
+	.swipper{
+		width:100%;
 		position: relative;
 		right: 0px;
+	} }
+@media (max-width: 768px) {
+	#register {
+		//height: 100%; /* Adjust the height for smaller screens */
+		position: relative;
+		bottom: 600px;
+
+
 	}
 }

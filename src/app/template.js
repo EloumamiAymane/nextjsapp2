@@ -1,10 +1,14 @@
 "use client"
 import "../../public/assets/scss/socialv.scss"
 import "../../public/assets/scss/customizer.scss"
+import 'react-toastify/dist/ReactToastify.css';
 import {Provider} from "react-redux";
 import {store} from "../components/store";
+import {UserProvider} from "@/components/Context/Context";
+import {LoadingProvider} from "@/components/Context/StateApp";
 
 export default function Template({ children }) {
+
     return (
         <html lang="en">
         <head>
@@ -16,7 +20,12 @@ export default function Template({ children }) {
         <body>
 
         <Provider store={store}>
-         {children}
+            <UserProvider>
+                <LoadingProvider>
+                    {children}
+                </LoadingProvider>
+              </UserProvider>
+
         </Provider>
         </body>
         </html>

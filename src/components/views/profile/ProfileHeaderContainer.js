@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Image from "next/image";
 
+
 const ProfileHeaderContainer =(props)=>{
+
+
     return(
         <>
             <div className="header-for-bg">

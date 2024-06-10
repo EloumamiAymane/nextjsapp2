@@ -46,7 +46,7 @@ export const authOptions = {
                 token.id_token = account.id_token;
                 // token.expires_at = account.expires_at;
                 // token.refresh_token = account.refresh_token;
-              console.log(token)
+             // console.log(token)
                let user={
                   firstName:token.decoded.given_name,
                    lastName:token.decoded.family_name,
@@ -62,12 +62,16 @@ export const authOptions = {
         async session({ session, token }) {
             // Send properties to the client
 
-            console.log( session)
-            session.access_token = encrypt(token.access_token); // see utils/sessionTokenAccessor.js
+           // console.log( session)
+            session.access_token = token.access_token; // see utils/sessionTokenAccessor.js
             session.id_token = encrypt(token.id_token);  // see utils/sessionTokenAccessor.js
+            session.isActive=false
+            session.firstName=token.decoded.given_name
+            session.lastName=token.decoded.family_name
+
             // session.roles = token.decoded.realm_access.roles;
            // session.error = token.error;
-         //  console.log(session)
+        //  console.log(session)
             // console.log("inside session ")
             return session;
         },

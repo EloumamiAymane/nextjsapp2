@@ -91,7 +91,7 @@ const ConfirmMail = () => {
                                     validation.Un email sera envoyé aprés validation.  À bientôt !</p>
                                 <div className="d-inline-block w-100">
                                     <Button type="button"   variant="primary" className="mt-3">
-                                        <Link href="/feed" className="text-light">
+                                        <Link href="/" className="text-light">
                                             <span className="d-flex align-items-center">
                                             <i className="material-symbols-outlined md-18 me-1">
                                             home
